@@ -1,0 +1,118 @@
+.slider__item {
+  padding-bottom: 133px;
+
+  background-color: #023966;
+  background-image: url("../img/slider-bg_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  overflow: hidden;
+
+  &--2 {
+    background-image: url("../img/slider-bg_2.jpg");
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+
+  width: 40px;
+  height: 75px;
+
+  font-size: 0px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  opacity: 0.4;
+
+  transition: all 0.2s ease;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.slick-prev {
+  background-image: url("../img/slider-arrow.png");
+  left: 33px;
+}
+
+.slick-next {
+  background-image: url("../img/slider-next.png");
+  right: 33px;
+}
+
+.slider__content {
+  position: relative;
+  z-index: 999;
+
+  padding-top: 20px;
+  padding-bottom: 67px;
+
+  overflow: hidden;
+
+  &--substrate {
+    background-color: rgba(42, 102, 150, 0.7);
+    background: linear-gradient(118deg,
+    rgba(42, 102, 150, 0.7) 0%,
+    rgba(42, 102, 150, 0.7) 43.95%,
+    rgba(75, 173, 210, 0) 44%,
+    rgba(75, 173, 210, 0) 100%);
+  }
+}
+
+@media (max-width: 1199px) {
+  .slick-arrow {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+
+  .slider__item {
+    padding-bottom: 116px;
+
+    background-image: url("../img/slider-bg_1_tablet.jpg");
+
+    &--2 {
+      background-image: url("../img/slider-bg_2_tablet.jpg");
+    }
+  }
+
+  .slider__content {
+    min-height: 480px;
+    padding-top: 14px;
+    padding-bottom: 42px;
+
+    &--substrate {
+      background: linear-gradient(118deg,rgba(42,102,150,.7) 0%,rgba(42,102,150,.7) 51.45%,rgba(75,173,210,0) 51.55%,rgba(75,173,210,0) 100%);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .slider__item {
+    padding-bottom: 0;
+
+    background-image: url("../img/slider-bg_1_mobile.jpg");
+
+    &--2 {
+      background-image: url("../img/slider-bg_2_mobile.jpg");
+    }
+  }
+
+  .slider__content {
+    min-height: 515px;
+    padding-top: 20px;
+
+    background: rgba(42, 102, 150, 0.7);
+  }
+}
+

@@ -1,0 +1,257 @@
+.steps {
+  padding-top: 70px;
+  padding-bottom: 1px;
+
+  color: #ffffff;
+
+  background-color: #012747;
+  background-image: url("../img/steps_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.step__title {
+  margin-bottom: 30px;
+
+  color: #ffffff;
+}
+
+.steps__pic {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 23px;
+
+  width: 150px;
+  height: 150px;
+
+  border: 10px solid #ffffff;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -10px;
+    right: -10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #034d88;
+    text-align: center;
+
+    background-color: #ffffff;
+  }
+  
+  &--1::after {content: "01";}
+  &--2::after {content: "02";}
+  &--3::after {content: "03";}
+  &--4::after {content: "04";}
+  &--5::after {content: "05";}
+}
+
+.steps__list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.steps__item {
+  position: relative;
+
+  margin-bottom: 29px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 32px;
+    top: 58px;
+    right: 40px;
+
+    background-image: url("../img/steps_arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+  }
+
+  &:nth-child(3n)::after {
+    background-image: none;
+  }
+}
+
+.steps__text {
+  width: 270px;
+  margin-bottom: 0;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.steps__banner {
+  height: 100%;
+  padding: 31px 27px;
+  padding-right: 65px;
+
+  background-color: #ffffff;
+  background-image: url("../img/steps_banner_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.steps__banner-title {
+  margin: 0;
+  margin-bottom: -10px;
+
+  font-size: 36px;
+  line-height: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d41711;
+}
+
+.steps__banner-text {
+  margin-bottom: 40px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+}
+
+
+@media (max-width: 1199px) {
+  .steps {
+    padding-top: 28px;
+    padding-bottom: 10px;
+  }
+
+  .steps__item {
+    margin-bottom: 26px;
+
+    &::after {
+      width: 119px;
+      height: 27px;
+      top: 51px;
+      right: 8px;
+    }
+
+    &:nth-child(3n)::after {
+      background-image: url("../img/steps_arrow.png");
+    }
+
+    &:nth-child(2n) {
+      margin-left: 25px;
+    }
+
+    &:nth-child(2n)::after {
+      background-image: none;
+    }
+  }
+
+  .steps__pic {
+    width: 128px;
+    height: 128px;
+    margin-bottom: 23px;
+
+    &::after {
+      width: 35px;
+      height: 35px;
+
+      font-size: 21px;
+      line-height: 2px;
+    }
+  }
+
+  .steps__icon {
+    max-width: 73px;
+    max-height: 68px;
+    object-fit: contain;
+  }
+
+  .steps__text {
+    width: 225px;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .steps__banner {
+    max-height: 230px;
+    margin-right: 35px;
+    padding: 33px 62px 31px 24px;
+  }
+
+  .steps__banner-title {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    line-height: 21px;
+  }
+
+  .steps__banner-text {
+    margin-bottom: 32px;
+
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 767px) {
+  .steps {
+    padding-top: 31px;
+    padding-bottom: 0;
+  }
+
+  .step__title {
+    margin-bottom: 30px;
+  }
+
+  .steps__list {
+    margin-bottom: 0;
+  }
+
+  .steps__item {
+    margin-bottom: 36px;
+
+    &::after {
+      display: none;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .steps__item-banner {
+    width: 100%;
+    padding: 0;
+  }
+
+  .steps__banner {
+    margin-right: 0;
+    padding: 33px 72px 38px 14px;
+  }
+
+  .steps__banner-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

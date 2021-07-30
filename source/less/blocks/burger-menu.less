@@ -1,0 +1,24 @@
+.burger-menu {
+  display: none;
+  width: 34px;
+  height: 24px;
+
+  background-color: transparent;
+  background-image: url("../img/menu.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 1199px) {
+  .burger-menu {
+    display: block;
+  }
+}
